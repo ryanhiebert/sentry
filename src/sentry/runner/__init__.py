@@ -73,6 +73,7 @@ for cmd in map(
         "sentry.runner.commands.spans.spans",
         "sentry.runner.commands.spans.write_hashes",
         "sentry.runner.commands.openai.openai",
+        "sentry.runner.commands.workstations.workstations",
     ),
 ):
     cli.add_command(cmd)
