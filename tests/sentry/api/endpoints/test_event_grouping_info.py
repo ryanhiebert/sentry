@@ -107,8 +107,8 @@ class EventGroupingInfoEndpointTestCase(APITestCase, PerformanceIssueTestCase):
         with pytest.raises(ResourceDoesNotExist):
             get_grouping_info("fake-config", self.project, event.event_id)
 
-    @mock.patch("sentry.api.endpoints.event_grouping_info.logger")
-    @mock.patch("sentry.api.endpoints.event_grouping_info.metrics")
+    @mock.patch("sentry.grouping.grouping_info.logger")
+    @mock.patch("sentry.grouping.grouping_info.metrics")
     def test_get_grouping_info_hash_mismatch(self, mock_metrics, mock_logger):
         # Make a Python event
         data = load_data(platform="python")
