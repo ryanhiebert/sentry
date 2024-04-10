@@ -3,8 +3,8 @@ from unittest import mock
 import pytest
 from django.urls import reverse
 
-from sentry.api.endpoints.event_grouping_info import get_grouping_info
 from sentry.api.exceptions import ResourceDoesNotExist
+from sentry.grouping.grouping_info import get_grouping_info
 from sentry.testutils.cases import APITestCase, PerformanceIssueTestCase
 from sentry.testutils.skips import requires_snuba
 from sentry.utils import json
