@@ -945,6 +945,8 @@ class DetailedProjectSerializer(ProjectWithTeamSerializer):
                 "verifySSL": bool(attrs["options"].get("sentry:verify_ssl", False)),
                 "scrubIPAddresses": bool(attrs["options"].get("sentry:scrub_ip_address", False)),
                 "scrapeJavaScript": bool(attrs["options"].get("sentry:scrape_javascript", True)),
+                "highlightTags": attrs["options"].get("sentry:highlight_tags", []),
+                "highlightContext": attrs["options"].get("sentry:highlight_context", []),
                 "groupingConfig": self.get_value_with_default(attrs, "sentry:grouping_config"),
                 "groupingEnhancements": self.get_value_with_default(
                     attrs, "sentry:grouping_enhancements"
