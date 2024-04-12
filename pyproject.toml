@@ -615,7 +615,6 @@ module = [
     "sentry.eventstore.reprocessing.redis",
     "sentry.issues.related.*",
     "sentry.lang.java.processing",
-    "sentry.llm.*",
     "sentry.nodestore.base",
     "sentry.nodestore.bigtable.backend",
     "sentry.nodestore.django.backend",
